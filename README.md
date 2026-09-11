@@ -5,5 +5,5 @@
 ### dependency
 
 ```bash
-uv sink
+uv sync
 ```
