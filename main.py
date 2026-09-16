@@ -32,11 +32,9 @@ for sample_path in sample_paths:
 target_paths = glob(str(TARGET_PATH / "*.fbx"))
 for target_path in target_paths:
     print("FBX:", target_path)
-
     mesh = o3d.io.read_triangle_mesh(target_path)
 
     mesh.compute_vertex_normals()
-    mesh.paint_uniform_color([0.7, 0.7, 0.7])
-
+    
     o3d.visualization.draw([mesh])
     break
