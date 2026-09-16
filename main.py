@@ -23,7 +23,8 @@ for sample_path in sample_paths:
     pcd = o3d.geometry.PointCloud()
     pcd.points = o3d.utility.Vector3dVector(points)
 
-    o3d.visualization.draw_geometries([pcd])
+    o3d.visualization.draw([pcd])
+    break
 
 # =========================
 # CAD FBX
@@ -37,4 +38,5 @@ for target_path in target_paths:
     mesh.compute_vertex_normals()
     mesh.paint_uniform_color([0.7, 0.7, 0.7])
 
-    o3d.visualization.draw_geometries([mesh])
+    o3d.visualization.draw([mesh])
+    break
